@@ -1,0 +1,70 @@
+.container{
+    background-color: #ff6666;
+    height:100%;
+    width: auto
+}
+.container:hover{
+    background-color: #ff99cc;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+fieldset{
+    background-color:#ff99cc;
+    padding: 16px;
+    border: 1px solid #D5D5D5;
+}
+.addfields{
+    margin: 10px 0;
+}
+
+.form-control{
+    width:92%;
+    margin-left:10px;
+}
+.remove{
+    background: #ccc;
+    color: #000;
+    font-weight: bold;
+    font-size: 21px;
+    border: 0;
+    cursor: pointer;
+    padding: 4px 9px;
+    vertical-align: top;
+    line-height: 100%;   
+}
+input[type="text"],
+select{
+    padding:5px;
+}
+.addname{
+    color:white;
+    background-color: #800000;
+    margin-left:10px;
+    width:10%;
+    border-radius: 10px;
+}
+.addfields{
+    color:white;
+    background-color: #800000;
+    margin-left:10px;
+    width:10%;
+    border-radius: 10px;
+}
+.addtoarray{
+    color:white;
+    background-color: #800000;
+    margin-left:10px;
+    width:10%;
+    border-radius: 10px;
+}
+.myoptions{
+    width:75%;
+    background-color:#800000;
+    color:white;
+    margin-left:10px;
+    border-radius: 10px;
+}
+.optionc{
+    background-color: ;
+}

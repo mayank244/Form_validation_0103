@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>FORM VALIDATION</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="newform.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	    <script src="newform.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="myController">
+        <div class="container">
+            <br><br><br><br>
+            <div class="row" id="row1">
+                <h1 class="header text-center">Dynamic Form Validation in Angular</h1>
+                <hr width="40%" class="line">
+            </div>
+            <br><br>
+            <div class="row" id="row2">
+                <form name="userFormTwo" id="doform" novalidate>
+                    <div class="form-group" ng-class="{ 'has-error' : userFieldForm.email.$invalid }">
+                    <ng-form name="userFieldForm">
+                        <div class="newclass">&nbsp;&nbsp;Enter the Name:
+                            <input ng-model="entry" class="form-control" name="Name" placeholder="Enter a name" id="input">
+                            <br>
+                             <button class="addname" ng-click="addNewName(entry)">ADD</button>
+                            <br><br>
+                            <label>&nbsp;&nbsp;&nbsp;{{ entry }}'s Email</label>
+                           
+                        </div>
+                        <div class="row" id="row3">
+                            <div class="optionc col-sm-2 col-xs-2 col-md-2" >
+                                  <select ng-model="choice.option" class="myoptions text-center">
+                                     <option value>Select</option>
+                                     <option value="Official">Official</option>
+                                     <option value="Personal">Personal</option>
+                                     <option value="College">College</option>
+                                  </select>    
+                            </div>
+                            <div class="col-sm-1 col-md-1 col-xs-1">
+                            </div>
+                            <div class="col-sm-8 col-md-8 col-xs-8">
+                                <input type="email" class="form-control" name="email" ng-model="user.email" placeholder="Enter a valid email" required>
+                                <button class="addtoarray" ng-click="addtoarray(user.email)">add</button>
+                                <p class="help-block" ng-show="userFieldForm.email.$invalid">Valid Email Address Required</p>
+                            </div>
+                            <div class="col-sm-1 col-md-1 col-xs-1">
+                                <button class="remove" ng-click="removeChoice()">X</button>
+                            </div>
+                        </div>
+                        <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+
+                    </ng-form>
+                    </div>
+                    <div id="choicesDisplay">
+                        {{ choices }}
+                    </div>  
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+    </body>
+</html>
